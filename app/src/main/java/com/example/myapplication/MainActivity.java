@@ -1,80 +1,77 @@
+// MainActivity.java
 package com.example.myapplication;
 
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
-import android.view.View;
-
-import androidx.core.view.WindowCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.myapplication.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MainActivity extends AppCompatActivity {
-
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        ViewPager2 viewPager = findViewById(R.id.viewPager);
+        viewPager.setAdapter(new MyPagerAdapter(this));
 
-        setSupportActionBar(binding.toolbar);
+        TabLayout tabLayout = findViewById(R.id.tabs);
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show();
+        new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
+            switch (position) {
+                case 0:
+                    tab.setText("Home");
+                    break;
+                case 1:
+                    tab.setText("Search");
+                    break;
+                case 2:
+                    tab.setText("New");
+                    break;
+                case 3:
+                    tab.setText("Messages");
+                    break;
+                case 4:
+                    tab.setText("Profile");
+                    break;
             }
-        });
+        }).attach();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    public class MyPagerAdapter extends FragmentStateAdapter {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        public MyPagerAdapter(FragmentActivity fa) {
+            super(fa);
         }
 
-        return super.onOptionsItemSelected(item);
-    }
+        @Override
+        public Fragment createFragment(int position) {
+            switch (position) {
+                case 0:
+                    return new HomeFragment();
+                case 1:
+                    return new SearchFragment();
+                case 2:
+                    return new AddNewFragment();
+                case 3:
+                    return new MessagesFragment();
+                case 4:
+                    return new ProfileFragment();
+                default:
+                    return null;
+            }
+        }
 
-
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+        @Override
+        public int getItemCount() {
+            return 5; // Le nombre total d'onglets
+        }
     }
 }
