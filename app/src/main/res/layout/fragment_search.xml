@@ -1,7 +1,19 @@
-<!-- fragment_search.xml -->
+<!-- search_fragment.xml -->
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Rechercher dans les produits" />
 
     <TextView
         android:id="@+id/textView"
@@ -11,4 +23,10 @@
         android:layout_centerVertical="true"
         android:text="search" />
 
+
+    <!-- Autres éléments du fragment ici -->
+
 </RelativeLayout>
+
+
+

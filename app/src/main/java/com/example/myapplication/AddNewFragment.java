@@ -15,3 +15,5 @@ public class AddNewFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_add_new, container, false);
     }
 }
+
+
