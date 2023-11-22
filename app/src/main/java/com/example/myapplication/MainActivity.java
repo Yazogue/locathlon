@@ -27,23 +27,29 @@ public class MainActivity extends AppCompatActivity {
         new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
             switch (position) {
                 case 0:
-                    tab.setText("Home");
+                    tab.setIcon(R.drawable.ic_home);
+
                     break;
                 case 1:
-                    tab.setText("Search");
+                    tab.setIcon(R.drawable.ic_search);
+
                     break;
                 case 2:
-                    tab.setText("New");
+                    tab.setIcon(R.drawable.ic_add_new);
+
                     break;
                 case 3:
-                    tab.setText("Messages");
+                    tab.setIcon(R.drawable.ic_messages);
+
                     break;
                 case 4:
-                    tab.setText("Profile");
+                    tab.setIcon(R.drawable.ic_profile);
+
                     break;
             }
         }).attach();
     }
+
 
     public class MyPagerAdapter extends FragmentStateAdapter {
 
