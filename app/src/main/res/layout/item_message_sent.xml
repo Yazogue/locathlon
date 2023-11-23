@@ -4,6 +4,6 @@
     android:id="@+id/messageTextView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#64B5F6"
+    android:background="#FFFFFF"
     android:padding="8dp"
     android:layout_gravity="end"/>

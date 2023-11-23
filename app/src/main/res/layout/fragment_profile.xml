@@ -1,14 +1,57 @@
 <!-- fragment_profile.xml -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <!-- Photo de profil -->
+    <ImageView
+        android:id="@+id/profile_image"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="profile" />
+        android:layout_marginTop="16dp"/>
+
+    <!-- Onglets -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_marginTop="16dp"
+        android:background="#063970">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/ProfileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/EvaluationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evaluation" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/LocasButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mes Locas" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Conteneur du ViewPager pour les onglets -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabs2"
+        android:layout_marginTop="16dp">
+
+    </androidx.viewpager.widget.ViewPager>
 
 </RelativeLayout>

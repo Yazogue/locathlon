@@ -37,8 +37,9 @@ public class MessagesFragment extends Fragment {
         sendButton.setOnClickListener(v -> sendMessage());
 
         // Ajoutez quelques messages de test
-        messages.add(new Message("Hello, how can I help you?", false));
-        messages.add(new Message("Hi! I'm interested in your item.", true));
+        messages.add(new Message("Bonjour je suis interesser par votre article", false));
+        messages.add(new Message("il est disponible a partir du 15", true));
+        messages.add(new Message("Parfait !", true));
 
         messageAdapter.notifyDataSetChanged();
 
