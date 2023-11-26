@@ -45,6 +45,13 @@ public class HomeFragment extends Fragment {
             recyclerViewArticles.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
             adapterArticles = new ArticlesListAdapter(items);
             recyclerViewArticles.setAdapter(adapterArticles);
+            // Ajoutez un écouteur tactile à la RecyclerView
+
+            recyclerViewArticles.setOnTouchListener((v, event) -> {
+                // Demande au parent de ne pas intercepter l'événement tactile horizontal
+                v.getParent().requestDisallowInterceptTouchEvent(true);
+                return false;
+            });
         }
     }
 }
