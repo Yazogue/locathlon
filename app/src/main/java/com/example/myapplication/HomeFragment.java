@@ -46,11 +46,19 @@ public class HomeFragment extends Fragment {
             adapterArticles = new ArticlesListAdapter(items);
             recyclerViewArticles.setAdapter(adapterArticles);
             // Ajoutez un écouteur tactile à la RecyclerView
-
             recyclerViewArticles.setOnTouchListener((v, event) -> {
                 // Demande au parent de ne pas intercepter l'événement tactile horizontal
                 v.getParent().requestDisallowInterceptTouchEvent(true);
+
+                // Appel à performClick pour traiter le clic
+                v.performClick();
+
                 return false;
+            });
+
+            // Ajoutez un écouteur de clic
+            recyclerViewArticles.setOnClickListener(v -> {
+                // Traitement du clic ici
             });
         }
     }
