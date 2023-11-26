@@ -10,18 +10,23 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
 import com.google.android.material.tabs.TabLayout;
 
 public class ProfileFragment extends Fragment {
 
     private ViewPager viewPager3;
     private TabLayout tabLayout1;
+    private ImageView profile_image;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+
+        profile_image = view.findViewById(R.id.profile_image);
         // Initialiser les vues
         viewPager3 = view.findViewById(R.id.viewPager3);
         tabLayout1 = view.findViewById(R.id.tabs2);

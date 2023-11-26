@@ -1,6 +1,7 @@
 // MainActivity.java
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +9,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
-
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ViewPager2 viewPager = findViewById(R.id.viewPager);
+
         viewPager.setAdapter(new MyPagerAdapter(this));
+
 
         TabLayout tabLayout = findViewById(R.id.tabs);
 
@@ -48,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         }).attach();
+
     }
+
 
 
     public class MyPagerAdapter extends FragmentStateAdapter {
@@ -74,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
                     return null;
             }
         }
+
+
 
         @Override
         public int getItemCount() {

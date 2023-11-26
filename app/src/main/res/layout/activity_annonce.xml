@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnnonceActivity">
+
+    <ImageView
+        android:id="@+id/imageArticle"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/nomArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageArticle"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:text="Nom de l'article"/>
+
+    <TextView
+        android:id="@+id/evaluationArticle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nomArticle"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        android:text="Évaluation :"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nomArticle"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/evaluationArticle"
+        android:numStars="5"
+        android:stepSize="0.1" />
+
+    <TextView
+        android:id="@+id/prixArticle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nomArticle"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        android:textColor="#088A29"
+        android:text="Prix : 20.0"/>
+
+    <TextView
+        android:id="@+id/descriptionArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingBar"
+        android:padding="16dp"
+        android:text="Description de l'article"/>
+
+    <Button
+        android:id="@+id/louerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionArticle"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Louer"
+        android:backgroundTint="#5E7C05"/>
+
+    <Button
+        android:id="@+id/contacterVendeurButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionArticle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Contacter le vendeur"
+        android:backgroundTint="@android:color/darker_gray"/>
+
+    <Button
+        android:id="@+id/retourButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour"/>
+
+
+</RelativeLayout>

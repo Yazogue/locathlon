@@ -9,32 +9,44 @@
     <!-- Photo de profil -->
     <ImageView
         android:id="@+id/profile_image"
-        tools:srcCompat="@tools:sample/avatars"
+        android:scaleType="centerCrop"
+        android:background="#063970"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:text="Anonyme" />
 
     <!-- Onglets -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/profile_image"
+        android:layout_below="@id/textView2"
         android:layout_marginTop="16dp"
+        app:tabTextColor="#FFFFFF"
         android:background="#063970">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/ProfileButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile" />
+            android:text="Profile"
+            />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/EvaluationButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Evaluation" />
+            android:text="Evaluation"
+            />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/LocasButton"
