@@ -15,4 +15,16 @@ public class HomeFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
+    // Méthode dans le fragment où vous souhaitez appeler la méthode de MainActivity
+    private void appelDeMethodeDansMainActivity() {
+        // Obtenir une référence à l'activité parente (MainActivity)
+        MainActivity mainActivity = (MainActivity) getActivity();
+
+        // Vérifier si l'activité est non nulle avant d'appeler la méthode
+        if (mainActivity != null) {
+            // Appeler la méthode de MainActivity
+            mainActivity.initRecyclerView();
+        }
+    }
+
 }

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapterArticles;
     private RecyclerView recyclerViewArticles;
 
-    private void initRecyclerView() {
+    public void initRecyclerView() {
         ArrayList<ArticlesDomain> items=new ArrayList<>();
         items.add(new ArticlesDomain("VTT BTWIN 6-9ans","Bonjour, je loue ce VTT Racing Boy de BTWIN, parfait pour les enfants de 6 à 9 ans.\" +\n" +
                 "                \" Robuste, avec un design inspiré des vélos de course, il offre une expérience de conduite dynamique.\" +\n" +
