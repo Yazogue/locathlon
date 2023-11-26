@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initRecyclerView();
+
         ViewPager2 viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(new MyPagerAdapter(this));
 
