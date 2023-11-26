@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,7 @@ public class RecapActivity extends AppCompatActivity {
     private EditText expirationDateEditText;
     private EditText securityCodeEditText;
     private Button paymentButton;
+    private TextView totalAmountTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +56,13 @@ public class RecapActivity extends AppCompatActivity {
             // Calculer le montant total
             double totalPrice = pricePerDay * numberOfDays;
 
+
+
             // Vous pouvez utiliser les informations de la carte ici pour le paiement sécurisé
 
             // Exemple : Afficher le montant total
             Toast.makeText(this, "Montant total: " + totalPrice, Toast.LENGTH_SHORT).show();
+            totalAmountTextView.setText("Montant total: " + totalPrice);
 
             // Modifier l'apparence du bouton
             paymentButton.setBackgroundColor(getResources().getColor(android.R.color.holo_green_dark));

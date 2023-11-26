@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="etat_options">
+        <item>Neuf</item>
+        <item>Acceptable</item>
+        <item>Usé</item>
+    </string-array>
+</resources>

@@ -15,21 +15,22 @@
         android:iconifiedByDefault="false"
         android:queryHint="Rechercher un équipement" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="search" />
-
     <Button
         android:id="@+id/goToAnnonceButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Aller à AnnonceActivity"
         android:layout_below="@id/searchView"
         android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_centerInParent="@bool/car_ui_alert_dialog_force_dismiss_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchView"
+        android:layout_marginTop="160dp"
+        app:srcCompat="@drawable/logo" />
 
 
     <!-- Autres éléments du fragment ici -->

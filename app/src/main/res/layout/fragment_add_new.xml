@@ -1,14 +1,71 @@
-<!-- fragment_add_new.xml -->
+<!-- res/layout/fragment_add_new.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Ajoutez les éléments nécessaires, tels que ImageView, EditText, Spinner, et Button -->
+
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:hint="Titre de l'article" />
+
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:hint="ex : Bonne planche \nMesure du flotteur : \n-265 cm de long \n-76 cm de large\n "
+        android:inputType="textMultiLine"/>
+
+    <Spinner
+        android:id="@+id/etatSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionEditText"
+        android:layout_marginTop="160dp"
+        android:entries="@array/etat_options"
+        android:prompt="@string/choose_etat" />
+
+    <EditText
+        android:id="@+id/priceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etatSpinner"
+        android:layout_marginTop="16dp"
+        android:hint="Prix de location" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priceEditText"
+        android:layout_marginTop="16dp"
+        android:text="Ajouter" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="add new" />
+        android:text="Titre :"
+        android:layout_below="@id/imagePreview"
+        android:textSize="26sp"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description : :"
+        android:layout_below="@id/titleEditText"
+        android:textSize="26sp"/>
 
 </RelativeLayout>
