@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_login.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="@bool/car_ui_alert_dialog_force_dismiss_button"
+        android:hint="Nom d'utilisateur" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextUsername"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:backgroundTint="@color/black"
+        android:layout_centerInParent="@bool/car_ui_alert_dialog_force_dismiss_button"
+        android:text="Connexion"/>
+</RelativeLayout>
