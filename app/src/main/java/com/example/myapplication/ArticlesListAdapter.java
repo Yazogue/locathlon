@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,7 @@ public class ArticlesListAdapter extends RecyclerView.Adapter<ArticlesListAdapte
     int drawableResourceId=holder.itemView.getResources().getIdentifier(items.get(position).getPicUrl(),
             "drawable", holder.itemView.getContext().getPackageName());
 
+    Log.d("Glide", "Drawable Resource Name : " + items.get(position).getPicUrl());
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
                 .transform(new GranularRoundedCorners(30,30,0,0))
