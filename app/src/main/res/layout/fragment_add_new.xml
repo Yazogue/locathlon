@@ -1,7 +1,9 @@
 <!-- res/layout/fragment_add_new.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/edittext_background"
+    android:layout_margin="30px">
 
     <!-- Ajoutez les éléments nécessaires, tels que ImageView, EditText, Spinner, et Button -->
 
@@ -32,9 +34,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/descriptionEditText"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="50dp"
         android:entries="@array/etat_options"
-        android:prompt="@string/choose_etat" />
+        android:prompt="@string/choose_etat"/>
 
     <EditText
         android:id="@+id/priceEditText"
@@ -50,7 +52,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/priceEditText"
         android:layout_marginTop="16dp"
-        android:text="Ajouter" />
+        android:text="Ajouter"
+        android:backgroundTint="@color/black"/>
 
     <TextView
         android:id="@+id/textView3"

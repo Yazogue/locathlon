@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/edit_background"
+    android:layout_margin="30px"
     tools:context=".AnnonceActivity">
 
     <ImageView
@@ -22,7 +24,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:padding="16dp"
-        android:text="Nom de l'article"/>
+        android:text="Nom de l'article"
+        />
 
     <TextView
         android:id="@+id/evaluationArticle"
@@ -64,7 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ratingBar"
         android:padding="16dp"
-        android:text="Description de l'article"/>
+        android:text="Description de l'article"
+        />
 
     <Button
         android:id="@+id/louerButton"
@@ -91,7 +95,8 @@
         android:id="@+id/retourButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retour"/>
+        android:text="Retour"
+        android:backgroundTint="@android:color/darker_gray"/>
 
 
 </RelativeLayout>
