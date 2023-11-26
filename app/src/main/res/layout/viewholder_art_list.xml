@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/btwin_racing_boy_vtt_200x133" />
+        android:src="@drawable/btwin_racing_boy_vtt_200x133" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -34,7 +34,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/star" />
+            android:src="@drawable/star" />
 
         <TextView
             android:id="@+id/scoreTxt"
@@ -99,5 +99,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/feeTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/feeTxt"
-        tools:src="@drawable/review" />
+        android:src="@drawable/review" />
 </androidx.constraintlayout.widget.ConstraintLayout>
