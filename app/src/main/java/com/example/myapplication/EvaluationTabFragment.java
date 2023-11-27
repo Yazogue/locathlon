@@ -35,9 +35,9 @@ public class EvaluationTabFragment extends Fragment {
         // Remplir les notes d'évaluation (c'est un exemple, vous devez récupérer ces données depuis votre modèle ou votre source de données)
         ratingBarGlobal.setRating(4.5f);
         ratingBarQualiteProduit.setRating(4.0f);
-        ratingBarServiceClient.setRating(5.0f);
-        ratingBarLivraison.setRating(4.5f);
-        txtCommentaire.setText("Excellent service! Livraison rapide et produit de haute qualité.");
+        ratingBarServiceClient.setRating(3.4f);
+        ratingBarLivraison.setRating(4.1f);
+        txtCommentaire.setText("Dernier commentaire : Excellent service!");
 
         return view;
     }

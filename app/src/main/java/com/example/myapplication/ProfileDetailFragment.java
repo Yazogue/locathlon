@@ -1,5 +1,6 @@
 package com.example.myapplication;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,10 +29,10 @@ public class ProfileDetailFragment extends Fragment {
         txtAdresseMail = view.findViewById(R.id.txtAdresseMail);
 
         // Remplir les informations (c'est un exemple, vous devez récupérer ces données depuis votre modèle ou votre source de données)
-        txtNom.setText("Nom");
-        txtPrenom.setText("Prénom");
-        txtNumeroTelephone.setText("Numéro de téléphone");
-        txtAdresseMail.setText("Adresse e-mail");
+        txtNom.setText(Html.fromHtml("<b>Nom: </b>Dupont"));
+        txtPrenom.setText(Html.fromHtml("<b>Prénom : </b>Julien"));
+        txtNumeroTelephone.setText(Html.fromHtml("<b>Numéro de téléphone : </b>0731567197"));
+        txtAdresseMail.setText(Html.fromHtml("<b>Adresse e-mail : </b>juliendupont@orange.fr"));
 
         return view;
     }

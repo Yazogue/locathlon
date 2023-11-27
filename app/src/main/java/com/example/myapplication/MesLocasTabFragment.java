@@ -69,8 +69,8 @@ public class MesLocasTabFragment extends Fragment {
     private List<LocationModel> getMesLocasList() {
         List<LocationModel> locasList = new ArrayList<>();
 
-        locasList.add(new LocationModel("Location 1", "1 janvier 2023", "5 jours"));
-        locasList.add(new LocationModel("Location 2", "10 février 2023", "3 jours"));
+        locasList.add(new LocationModel("Location velo", "1 janvier 2023", "5 jours"));
+        locasList.add(new LocationModel("Location Paddle", "10 février 2023", "3 jours"));
         // Ajoutez d'autres locations selon vos besoins
 
         return locasList;

@@ -64,7 +64,7 @@ public class AddNewFragment extends Fragment {
         db = FirebaseFirestore.getInstance();
 
         // Remplacez "your_image_resource" par l'ID de votre image par défaut dans le dossier res/drawable
-        imagePreview.setImageResource(R.drawable.ic_launcher_background);
+        imagePreview.setImageResource(R.drawable.emptyimage);
 
         // Ajoutez un OnClickListener pour l'ImageView
         imagePreview.setOnClickListener(new View.OnClickListener() {
