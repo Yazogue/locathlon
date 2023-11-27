@@ -98,7 +98,7 @@ public class AddNewFragment extends Fragment {
                 data.put("price",Price);
                 data.put("imageUri",ImageUri);
 
-                db.collection("data")
+                db.collection("articles")
                         .add(data)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
 

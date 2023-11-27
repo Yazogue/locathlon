@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import static android.webkit.URLUtil.isValidUrl;
+
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -15,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class ArticlesListAdapter extends RecyclerView.Adapter<ArticlesListAdapter.ViewHolder> {
@@ -42,11 +45,17 @@ public class ArticlesListAdapter extends RecyclerView.Adapter<ArticlesListAdapte
     int drawableResourceId=holder.itemView.getResources().getIdentifier(items.get(position).getPicUrl(),
             "drawable", holder.itemView.getContext().getPackageName());
 
-    Log.d("Glide", "Drawable Resource Name : " + items.get(position).getPicUrl());
-        Glide.with(holder.itemView.getContext())
-                .load(drawableResourceId)
-                .transform(new GranularRoundedCorners(30,30,0,0))
-                .into(holder.pic);
+        String imageUrl = items.get(position).getPicUrl();
+        if (imageUrl != null && isValidUrl(imageUrl)) {
+            // Load the image using Glide if the URL is valid
+            Glide.with(holder.itemView.getContext())
+                    .load(imageUrl)
+                    .transform(new GranularRoundedCorners(30, 30, 0, 0))
+                    .into(holder.pic);
+        } else {
+            // Use a default image from your drawable resources
+            holder.pic.setImageResource(R.drawable.emptyimage);
+        }
         holder.itemView.setOnClickListener(view -> {
             Intent intent = new Intent(holder.itemView.getContext(),DetailActivity.class);
             intent.putExtra("object",items.get(position));

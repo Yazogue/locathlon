@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import static android.webkit.URLUtil.isValidUrl;
 import static java.util.ResourceBundle.getBundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,12 +39,18 @@ protected void onCreate(Bundle savedInstanceState) {
 
     private void getBundle() {
     object = (ArticlesDomain) getIntent().getSerializableExtra("object");
-    int drawableResourceId = this.getResources().getIdentifier(object.getPicUrl(),"drawable",this.getPackageName());
 
-        Glide.with(this)
-                .load(drawableResourceId)
-                .into(picItem);
-
+        // Use Glide to load the image or set a default image if the URL is invalid
+        String imageUrl = object.getPicUrl();
+        if (imageUrl != null && isValidUrl(imageUrl)) {
+            int drawableResourceId = this.getResources().getIdentifier(imageUrl, "drawable", this.getPackageName());
+            Glide.with(this)
+                    .load(imageUrl)
+                    .into(picItem);
+        } else {
+            // Use a default image from your drawable resources
+            picItem.setImageResource(R.drawable.emptyimage);
+        }
         titleTxt.setText(object.getTitle());
         feeTxt.setText(object.getPrice() + "€");
         descriptionTxt.setText(object.getDescription());
