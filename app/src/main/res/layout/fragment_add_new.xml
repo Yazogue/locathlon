@@ -1,5 +1,6 @@
 <!-- res/layout/fragment_add_new.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/edittext_background"
@@ -12,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/ic_launcher_background"
+        tools:srcCompat="@drawable/emptyimage" />
 
     <EditText
         android:id="@+id/titleEditText"
@@ -26,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView4"
-        android:hint="ex : Bonne planche \nMesure du flotteur : \n-265 cm de long \n-76 cm de large\n "
+        android:hint="Ecrivez votre description."
         android:inputType="textMultiLine"/>
 
     <Spinner
