@@ -228,7 +228,7 @@
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:src="@drawable/paddle" />
+                            android:src="@drawable/paddle1" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView

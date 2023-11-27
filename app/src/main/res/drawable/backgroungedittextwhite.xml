@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="20dp" /> <!-- Ajustez le rayon pour définir le degré d'arrondi -->
+    <stroke android:color="#FAFAFA" android:width="2dp" /> <!-- Couleur et largeur de la bordure -->
+    <solid android:color="#FAFAFA"
+        /> <!-- Couleur de fond -->
+</shape>

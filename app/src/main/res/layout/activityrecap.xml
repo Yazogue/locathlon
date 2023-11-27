@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/edittext_background"
+    android:background="@drawable/edit_background"
     android:layout_margin="30px">
 
     <EditText
@@ -30,7 +30,7 @@
         android:textSize="18sp"
         android:textColor="@android:color/black"
         android:layout_below="@id/editTextNumberOfDays"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/editTextCardNumber"
@@ -39,7 +39,13 @@
         android:hint="Numéro de carte"
         android:inputType="number"
         android:layout_below="@id/textViewTotalAmount"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"
+        android:background="@drawable/backgroungedittextwhite"
+        android:layout_marginBottom="20px"
+        android:paddingStart="8dp"
+        android:paddingEnd="9dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
 
     <EditText
         android:id="@+id/editTextExpirationDate"
@@ -48,7 +54,13 @@
         android:hint="Date d'expiration"
         android:inputType="text"
         android:layout_below="@id/editTextCardNumber"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"
+        android:background="@drawable/backgroungedittextwhite"
+        android:layout_marginBottom="20px"
+        android:paddingStart="8dp"
+        android:paddingEnd="9dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
 
     <EditText
         android:id="@+id/editTextSecurityCode"
@@ -57,7 +69,13 @@
         android:hint="Code de sécurité"
         android:inputType="number"
         android:layout_below="@id/editTextExpirationDate"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"
+        android:background="@drawable/backgroungedittextwhite"
+        android:layout_marginBottom="20px"
+        android:paddingStart="8dp"
+        android:paddingEnd="9dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
 
     <Button
         android:id="@+id/buttonPayment"
@@ -66,6 +84,7 @@
         android:text="Procéder au paiement"
         android:layout_below="@id/editTextSecurityCode"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/brown"/>
 
 </RelativeLayout>

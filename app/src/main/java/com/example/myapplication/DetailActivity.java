@@ -50,6 +50,16 @@ protected void onCreate(Bundle savedInstanceState) {
         reviewTxt.setText(object.getReview()+"");
         scoreTxt.setText(object.getScore()+"");
 
+        // Ajouter un bouton de retour personnalisé
+        ImageView retourButton = findViewById(R.id.imageView7);
+        retourButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+
         rentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

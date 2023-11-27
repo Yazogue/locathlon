@@ -17,12 +17,14 @@ public class RecapActivity extends AppCompatActivity {
     private EditText expirationDateEditText;
     private EditText securityCodeEditText;
     private Button paymentButton;
+    private ArticlesDomain object;
     private TextView totalAmountTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activityrecap);
+        //object = new ArticlesDomain();
 
         pricePerDayEditText = findViewById(R.id.editTextPricePerDay);
         numberOfDaysEditText = findViewById(R.id.editTextNumberOfDays);
@@ -30,6 +32,8 @@ public class RecapActivity extends AppCompatActivity {
         expirationDateEditText = findViewById(R.id.editTextExpirationDate);
         securityCodeEditText = findViewById(R.id.editTextSecurityCode);
         paymentButton = findViewById(R.id.buttonPayment);
+        double articlePrice = object.getPrice();
+        pricePerDayEditText.setText(String.valueOf(articlePrice) + "€");
 
         paymentButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +64,7 @@ public class RecapActivity extends AppCompatActivity {
 
             // Vous pouvez utiliser les informations de la carte ici pour le paiement sécurisé
 
+            pricePerDayEditText.setText(object.getPrice() + "€");
             // Exemple : Afficher le montant total
             Toast.makeText(this, "Montant total: " + totalPrice, Toast.LENGTH_SHORT).show();
             totalAmountTextView.setText("Montant total: " + totalPrice);
